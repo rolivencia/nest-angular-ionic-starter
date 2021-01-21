@@ -19,4 +19,18 @@ describe('AppController', () => {
       expect(appController.getHello()).toBe('Hello World!');
     });
   });
+
+  describe('cats', () => {
+    it('should return Three Cats', () => {
+      expect(appController.getCats()).toHaveLength(3);
+    });
+  });
+
+  describe('cats', () => {
+    it('should expect cat 2 to be Garfield', () => {
+      const shouldBeGarfield = appController.getCats().filter(cat => cat === 'Garfield');
+      expect(shouldBeGarfield).toHaveLength(1);
+    });
+  });
+
 });
