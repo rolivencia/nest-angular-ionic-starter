@@ -2,7 +2,7 @@
   "name": "client-web",
   "version": "0.0.0",
   "scripts": {
-    "postinstall": "ng build --aot -prod",
+    "postinstall": "ng build --aot --prod",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
