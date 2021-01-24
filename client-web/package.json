@@ -5,8 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:win": "(if exist ..\\server\\front rmdir ..\\server\\front /s /q) && ng build --prod && move dist/client-web ..\\server\\front",
-    "build:mac": "rm -rf ../server/front && mkdir ../server/front && ng build --prod && mv dist/client-web/* ../server/front/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
