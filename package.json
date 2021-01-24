@@ -4,6 +4,9 @@
   "engines": {
     "node": "14.x"
   },
+  "dependencies": {
+    "@angular/cli": "^10.0.6"
+  },
   "scripts": {
     "heroku-prebuild": "cd client-web && npm install && cd .. && cd server && npm install && cd ..",
     "build": "cd client-web && ng build --prod && cd ../server && npm run build && mv ../client-web/dist/* ../server/dist/client-web",
