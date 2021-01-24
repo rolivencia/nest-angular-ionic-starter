@@ -7,6 +7,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "prebuild": "node_modules/.bin/rimraf dist",
+    "postinstall": "npm run build && mv ../client-web/dist/* ../server/dist/client-web",
     "dev:full-start": "node build-stack.js && node_modules/.bin/nest start",
     "dev:full-build": "node build-stack.js && node_modules/.bin/nest build",
     "build": "node_modules/.bin/nest build",
