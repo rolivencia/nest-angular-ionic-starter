@@ -27,7 +27,7 @@ describe('AppController', () => {
   });
 
   describe('cats', () => {
-    it('should expect cat 2 to be Garfield', () => {
+    it('should expect one cat to be Garfield', () => {
       const shouldBeGarfield = appController.getCats().filter(cat => cat === 'Garfield');
       expect(shouldBeGarfield).toHaveLength(1);
     });
