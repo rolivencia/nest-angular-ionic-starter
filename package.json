@@ -2,7 +2,6 @@
   "name": "nest-angular-ionic-starter",
   "version": "1.0.0",
   "scripts": {
-    "heroku-cleanup": "cd client-web && ng build --prod && cd ../server && npm run build && mv ../client-web/dist/* ../server/dist/client-web && cd ..",
-    "start": "cd server && npm run start:prod"
+    "start": "cd client-web && ng build --prod && cd ../server && npm run build && mv ../client-web/dist/* ../server/dist/client-web && cd .. && npm run start:prod"
   }
 }
