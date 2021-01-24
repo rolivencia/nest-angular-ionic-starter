@@ -4,12 +4,14 @@
   "engines": {
     "node": "14.x"
   },
-  "dependencies": {
-    "@angular/cli": "^10.0.6"
-  },
   "scripts": {
-    "heroku-prebuild": "cd client-web && npm install && cd .. && cd server && npm install && cd ..",
-    "build": "cd client-web && ng build --prod && cd ../server && npm run build && mv ../client-web/dist/* ../server/dist/client-web",
+    "setup-client": "cd client-web && npm install ",
+    "setup-server": "cd server && npm install",
+    "heroku-prebuild": "concurrently \"npm run setup-client\" \"npm run setup-server\"",
+    "build": "cd client-web && npm run build:prod && cd ../server && npm run build && mv ../client-web/dist/* ../server/dist/client-web",
     "start": "cd .. && npm run start:prod"
+  },
+  "devDependencies": {
+    "concurrently": "^5.3.0"
   }
 }
