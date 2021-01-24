@@ -5,7 +5,7 @@
     "node": "14.x"
   },
   "scripts": {
-    "heroku-prebuild": "cd client-web && npm install && cd .. && cd server && npm install",
+    "heroku-prebuild": "cd client-web && npm install && cd .. && cd server && npm install && cd ..",
     "build": "cd client-web && ng build --prod && cd ../server && npm run build && mv ../client-web/dist/* ../server/dist/client-web",
     "start": "cd .. && npm run start:prod"
   }
