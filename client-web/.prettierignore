@@ -1,0 +1,10 @@
+# Ignore Artifacts
+build
+dist
+
+# Ignore npm modules
+node_modules
+
+# Ignore Testing results
+res
+coverage
