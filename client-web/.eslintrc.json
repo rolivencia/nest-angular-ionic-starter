@@ -9,8 +9,11 @@
                 "createDefaultProgram": true
             },
             "extends": [
+                "eslint:recommended",
                 "plugin:@angular-eslint/recommended",
                 "plugin:@angular-eslint/template/process-inline-templates",
+                "plugin:@typescript-eslint/recommended",
+                "plugin:@typescript-eslint/recommended-requiring-type-checking",
                 "plugin:rxjs/recommended"
             ],
             "rules": {
@@ -30,6 +33,7 @@
                         "style": "kebab-case"
                     }
                 ],
+                "@typescript-eslint/no-empty-function": ["error", { "allow": ["constructors"] }],
                 "rxjs/finnish": [
                     "error",
                     {
