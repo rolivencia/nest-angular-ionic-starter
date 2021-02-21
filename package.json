@@ -8,6 +8,7 @@
     "build": "node build-stack.js",
     "heroku-prebuild": "npm run setup-client && npm run setup-server",
     "lint": "cd server && npm run lint && cd ../client-web && npm run lint",
+    "postinstall": "husky install",
     "prettify": "npx prettier --write .",
     "setup-client": "cd client-web && npm install",
     "setup-server": "cd server && npm install",
@@ -17,6 +18,7 @@
     "copyfiles": "^2.4.1"
   },
   "devDependencies": {
+    "husky": "^5.0.9",
     "prettier": "^2.1.2"
   }
 }
