@@ -5,11 +5,12 @@
     "node": "14.x"
   },
   "scripts": {
-    "setup-client": "cd client-web && npm install",
-    "setup-server": "cd server && npm install",
+    "build": "node build-stack.js",
     "heroku-prebuild": "npm run setup-client && npm run setup-server",
     "lint": "cd server && npm run lint && cd ../client-web && npm run lint",
-    "build": "node build-stack.js",
+    "prettify": "npx prettier --write .",
+    "setup-client": "cd client-web && npm install",
+    "setup-server": "cd server && npm install",
     "start": "cd server && npm run start:prod"
   },
   "dependencies": {

@@ -5,7 +5,6 @@ module.exports = {
     tabWidth: 4,
     semi: true,
     bracketSpacing: true,
-    arrowFunctionParentheses: true,
     trailingComma: 'all',
     arrowParens: 'always',
     htmlWhitespaceSensitivity: 'strict',
