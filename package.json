@@ -8,6 +8,8 @@
     "build": "node build-stack.js",
     "heroku-prebuild": "npm run setup-client && npm run setup-server",
     "lint": "cd server && npm run lint && cd ../client-web && npm run lint",
+    "test": "cd server && npm run test && cd ../client-web && ng test --browsers=ChromeHeadless --watch=false",
+    "postinstall": "npx husky install",
     "prettify": "npx prettier --write .",
     "setup-client": "cd client-web && npm install",
     "setup-server": "cd server && npm install",
@@ -17,6 +19,9 @@
     "copyfiles": "^2.4.1"
   },
   "devDependencies": {
-    "prettier": "^2.1.2"
+    "husky": "^5.0.9",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.1.2",
+    "pretty-quick": "^3.1.0"
   }
 }
