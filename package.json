@@ -9,7 +9,7 @@
     "heroku-prebuild": "npm run setup-client && npm run setup-server",
     "lint": "cd server && npm run lint && cd ../client-web && npm run lint",
     "test": "cd server && npm run test && cd ../client-web && ng test --browsers=ChromeHeadless --watch=false",
-    "postinstall": "husky install",
+    "postinstall": "npx husky install",
     "prettify": "npx prettier --write .",
     "setup-client": "cd client-web && npm install",
     "setup-server": "cd server && npm install",
